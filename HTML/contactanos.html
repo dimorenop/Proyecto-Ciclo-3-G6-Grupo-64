@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/contactanos.css">
+</head>
+
+<body>
+    <section id="seccion1">
+        <!-- Image and text -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+            <a class="navbar-brand" href="../HTML/index.html">
+                <!-- <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg " width="30 " height="30"
+                    class="d-inline-block align-top" alt=" " loading="lazy " />  -->
+                
+                <h1>VacuPet</h1>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../HTML/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/contactanos.html">Contáctanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../HTML/login.html">Iniciar Sesión</a>
+                    </li>
+                    <li class="nav-item" margin-right: 50px;>
+                        <a class="nav-link" href="../HTML/signup.html">Regístrate</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section id="portada-contacto">
+
+            <div class="module">
+                <div class="module-inside">
+                    <h2 class="contactanos-titulo" id="contactanos-titulo">Contáctanos</h2>
+
+                <div class="contact_form">
+                  <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+                
+                
+
+                    <div class="formulario">      
+                        
+                          <form action="submeter-formulario.php" method="post">       
+                
+                            
+                                <p>
+                                  <label for="nombre" class="colocar_nombre">Nombre
+                                    <span class="obligatorio">*</span>
+                                  </label>
+                                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                                </p>
+                              
+                                <p>
+                                  <label for="email" class="colocar_email">Email
+                                    <span class="obligatorio">*</span>
+                                  </label>
+                                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                                </p>
+                            
+                                <p>
+                                  <label for="telefone" class="colocar_telefono">Teléfono
+                                  </label>
+                                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                                </p>    
+                              
+                                <p>
+                                  <label for="website" class="colocar_website">Sitio web
+                                  </label>
+                                    <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                                </p>    
+                              
+                                <p>
+                                  <label for="asunto" class="colocar_asunto">Asunto
+                                    <span class="obligatorio">*</span>
+                                  </label>
+                                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                                </p>    
+                              
+                                <p>
+                                  <label for="mensaje" class="colocar_mensaje">Mensaje
+                                    <span class="obligatorio">*</span>
+                                  </label>                     
+                                                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                                                </p>                    
+                              
+                                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+                
+                                <p class="aviso">
+                                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                                </p>          
+                            
+                          </form>
+                    </div>  
+                  </div>
+                </div>
+
+              </div>
+
+        </section>
+
+
+
+
+
+        <!-- Sección del pie de página -->
+
+        <section id="seccion5">
+            <!-- Footer -->
+            <footer class="page-footer bg-secondary text-white pt-4">
+                <!-- Footer Text -->
+                <div class="container-fluid text-center text-md-left">
+                    <!-- Grid row -->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <!-- Content -->
+                        <h5 class="font-weight-bold">VacuPet</h5>
+                        <p id = "pie-de-pagina">
+                            Proyecto desarrollado por el grupo #6 del G64 en el marco
+                            del ciclo 3 del programa misiónTic 2022
+                        </p>
+                    </div>
+                    <!-- Grid row -->
+                </div>
+                <!-- Footer Text -->
+                <!-- Copyright -->
+                <div id="copyright" class="footer-copyright text-center py-1 text-black">
+                    (c) 2022 Copyright: DAD
+                </div>
+                <!-- Copyright -->
+            </footer>
+            <!-- jQuery and JS bundle w/ Popper.js -->
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-
+   DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+                crossorigin="anonymous">
+                </script>
+        </section>
+
+</body>
+
+</html>

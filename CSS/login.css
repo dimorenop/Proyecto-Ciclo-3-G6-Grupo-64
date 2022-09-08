@@ -1,0 +1,197 @@
+a{
+    text-decoration:none;
+}
+
+.navbar-brand{
+    margin-left: 40px;
+}
+
+#navbarNav{
+    margin-right: 40px;
+}
+
+.nav-link{
+    font-weight: bold;
+    color: #d6bb0e;
+}
+
+#copyright{
+    background-color: #dee2e6;
+    border-top: 1px;
+    border-color: black;
+}
+
+/* Estilos Contactanos */
+
+.module {
+    height: auto;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+  .module::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image:  url("https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+    background-size: cover;
+    filter: blur(6px);
+  }
+  .module-inside {
+    position: relative;
+  }
+
+#contactanos-titulo{
+    padding: 30px 50px 0px 50px;
+    font-size: 70px;
+    align-items: baseline;
+}
+
+.contact_form {
+    width: 480px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #d7d6d6e6;
+    border: 1px solid #00000047;
+}
+
+input{
+  background-color: #fbfbfb; 
+  width: 390px; 
+  height: 40px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #9f8e1c;
+  margin-top: 10px;  
+  padding-left: 10px;
+}
+
+
+label{
+  display: block; 
+  float: center;  
+}
+
+
+button{
+  padding-top: 9px;
+  height: 45px; 
+  padding-left: 5px;
+  padding-right: 5px;   
+  margin-bottom: 20px; 
+  margin-top: 10px;   
+  text-transform: uppercase;
+  background-color: #e8a509; 
+  border-color: #9e9e35; 
+  border-style: solid; 
+  border-radius: 10px;  
+  width: 390px;   
+  cursor: pointer;
+  border-block-width: 1px;  
+}
+
+button:hover{
+  background-color: #52b627;
+}
+
+button p{
+  color: #fff; 
+}
+
+
+span{
+  color: #b61919; 
+}
+
+
+.aviso{
+  font-size: 13px;  
+  color: #0e0e0e;  
+}
+
+
+h1{
+  text-align: letf; 
+  color: #ffffff;
+}
+
+
+h3{
+    margin: 10px;
+  font-size: 16px; 
+  color: #0e0e0e;   
+}
+
+
+p{
+  font-size: 14px; 
+  color: #0e0e0e; 
+}
+
+
+::-webkit-input-placeholder {
+ color: #000000;
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #000000;
+}
+
+
+.formulario input:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+
+.formulario textarea:focus{
+  outline:0;
+  border: 1px solid #97d848;
+}
+
+#registrate{
+    text-decoration: none;
+    margin: 10px;
+
+}
+
+#login{
+    font-weight: bold;
+}
+
+#pie-de-pagina{
+    color: #ffffff;
+}
+
+.AccountFooter{
+    text-align: center;
+}
+
+#registrate {
+    padding: 9px;
+    background-color: #af2828;
+    color: #ffffff;
+    border-block-width: 1px;
+    border-color: #000000;
+    border-style: solid;
+    border-radius: 10px;
+    width: 420px;
+    cursor: pointer;
+}
+
+#registrate:hover{
+    background-color: #e8a509; 
+}
