@@ -1,0 +1,62 @@
+.navbar-brand{
+    margin-left: 50px;
+}
+
+#navbarNav{
+    margin-right: 50px;
+}
+
+#portada{
+    height: 500px;
+}
+
+#mision-portada{
+    padding: 100px 50px 50px 50px;
+    font-size: 70px;
+}
+
+#descripcion-portada{
+    margin: 0px 50px 50px 50px;
+    font-size: 25px;
+    width: 650px;
+    height: 350px;
+}
+
+#portada{
+    height: 800px;
+    background-image: url("https://images.unsplash.com/photo-1545529468-42764ef8c85f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+    background-size: cover;
+    background-size: 85rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.elemento-portada{
+    align-items: baseline;
+}
+
+#imagenes-proyecto{
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+    background-color: black;
+    margin-bottom: 0.3%;
+}
+
+#titulo-imagenes{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.nav-link{
+    font-weight: bold;
+    color: #d6bb0e;
+}
+
+#copyright{
+    background-color: #dee2e6;
+    border-top: 1px;
+    border-color: black;
+}
