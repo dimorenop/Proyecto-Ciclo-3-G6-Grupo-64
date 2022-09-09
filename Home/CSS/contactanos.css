@@ -224,3 +224,7 @@ p{
     background-color: #ffffff;
     color: #000000;
   }
+
+  ::placeholder{
+    color: gray;
+}
