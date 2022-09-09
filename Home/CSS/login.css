@@ -195,3 +195,39 @@ p{
 #registrate:hover{
     background-color: #e8a509; 
 }
+
+#usuario-login {
+  margin-left: 20px;
+  background-color: #fafafa;
+  color: #000000;
+  /* border-block-width: 1px;
+  border-color: #000000; */
+  border-style: solid;
+  border-radius: 10px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+#usuario-login:hover{
+  background-color: #f0d01c;
+  color: #000000;
+}
+
+#usuario-signup {
+    margin-left: 20px;
+    background-color: #f0d01c;
+    color: #000000;
+    /* border-block-width: 1px;
+    border-color: #000000; */
+    border-style: solid;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  #usuario-signup:hover{
+    background-color: #ffffff;
+    color: #000000;
+  }
