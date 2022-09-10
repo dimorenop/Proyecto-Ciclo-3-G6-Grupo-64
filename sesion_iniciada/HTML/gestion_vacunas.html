@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestion Pacientes</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../CSS/gestion_vacunas.css">
+</head>
+
+<body>
+    <section id="seccion1">
+        <!-- Image and text -->
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
+            <a class="navbar-brand" href="../../Home/HTML/index.html">
+                <!-- <img src="https://getbootstrap.com/docs/4.5/assets/brand/bootstrap-solid.svg " width="30 " height="30"
+                    class="d-inline-block align-top" alt=" " loading="lazy " />  -->
+
+                <h1>VacuPet</h1>
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../sesion_iniciada/HTML/menu_principal.html">Menu Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="cerrar-sesion" href="../../Home/HTML/index.html">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+
+    <section id="portada-contacto">
+
+        <div class="module">
+            <div class="module-inside">
+                <h2 class="menu-titulo" id="menu-titulo">Gestion Pacientes</h2>
+
+                <section class="consulta">
+                    <div class="gestion-pacientes">
+                        <div class="contact_form">
+                            <h3>Datos Paciente</h3>
+
+
+
+                            <div class="formulario">
+
+                                <form action="submeter-formulario.php" method="post">
+                                    <section id="datos">
+                                        <div class="info-enlinea">
+                                            <p>
+                                                <label for="tipo" class="colocar_tipo">Tipo De Documento
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <select name="introducir_tipo" id="tipo" required="obligatorio"
+                                                    placeholder="Tipo De Documento">
+                                                    <option>C.C</option>
+                                                    <option>T.I</option>
+                                                    <option>Cedula de Extranjería</option>
+                                                    <option>Pasaporte</option>
+                                                </select>
+                                            </p>
+
+                                            <p>
+                                                <label for="numero-documento" class="colocar_documento">Número de
+                                                    Documento
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="number" name="introducir_documento" id="documento"
+                                                    required="obligatorio" placeholder="Escribe tu documento">
+                                            </p>
+
+                                            <p>
+
+                                                <label for="vacuna" class="colocar_vacuna">Consulta
+                                                </label>
+                                                <button type="submit" class="botones-formulario"
+                                                    id="consultar-propietario">
+                                                    Consultar Propietario
+                                                </button>
+                                            </p>
+
+                                            <p>
+                                                <label for="nombres" class="colocar_nombres">Nombre propietario
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="text" name="introducir_nombres" id="nombres"
+                                                    required="obligatorio" placeholder="Escribe tu Nombres">
+                                            </p>
+
+                                            <p>
+                                                <label for="apellidos" class="colocar_apellidos">Apellidos propietario
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="text" name="introducir_apellidos" id="apellidos"
+                                                    required="obligatorio" placeholder="Escribe tus apellidos">
+                                            </p>
+
+                                            <p>
+                                                <label for="fecha-nacimiento" class="colocar_fecha_nacimiento">Fecha de
+                                                    Nacimiento
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="date" name="introducir_fecha_nacimiento"
+                                                    id="fecha-nacimiento" required="obligatorio"
+                                                    placeholder="Fecha De Nacimiento">
+                                            </p>
+
+                                        </div>
+                                        <div class="info-enlinea">
+
+
+                                            <p>
+                                                <label for="vacuna" class="colocar_vacuna">Vacuna
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <select name="introducir_vacuna" id="vacuna" required="obligatorio"
+                                                    placeholder="Vacuna">
+                                                    <option>vacuna 1</option>
+                                                    <option>vacuna 2</option>
+                                                    <option>vacuna 3</option>
+                                                    <option>vacuna 4</option>
+                                                </select>
+                                            </p>
+
+                                            <p>
+                                                <label for="dosis" class="colocar_documento">Dosis
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="text" name="introducir_dosis" id="dosis"
+                                                    required="obligatorio" placeholder="Escribe la dosis aplicada">
+                                            </p>
+
+                                            <p>
+                                                <label for="fecha-refuerzo" class="colocar_fecha_refuerzo">Fecha de
+                                                    Refuerzo
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <input type="date" name="introducir_fecha_refuerzo" id="fecha-refuerzo"
+                                                    required="obligatorio" placeholder="Fecha De Refuerzo">
+                                            </p>
+
+                                            <p>
+                                                <label for="vacuna" class="colocar_vacuna">Vacuna
+                                                    <span class="obligatorio">*</span>
+                                                </label>
+                                                <select name="introducir_vacuna" id="vacuna" required="obligatorio"
+                                                    placeholder="Vacuna">
+                                                    <option>Funcionario 1</option>
+                                                    <option>Funcionario 2</option>
+                                                    <option>Funcionario 3</option>
+                                                    <option>Funcionario 4</option>
+                                                </select>
+                                            </p>
+
+                                            <p>
+                                                <label for="vacuna" class="colocar_vacuna">Agregar
+                                                </label>
+                                                <button type="submit" class="botones-formulario" id="agregar-vacuna">
+                                                    Agregar Vacuna
+                                                </button>
+                                            </p>
+
+                                        </div>
+                                    </section>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gestion-pacientes">
+                        <div class="contact_form">
+                            <h3>Listado de Vacunas</h3>
+
+
+
+                            <div id="consultas">
+                                <h5>Tabla consulta de vacunas</h5>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <ul class="fila">
+
+                        <li class="pseudo-boton">
+                            <button type="submit" name="modificar" id="boton-modificar">
+                                <p>Modificar</p>
+                            </button>
+                        </li>
+                        <li class="pseudo-boton">
+                            <button type="submit" name="eliminar" id="boton-eliminar">
+                                <p>Eliminar</p>
+                            </button>
+                        </li>
+                        <li class="pseudo-boton">
+                            <button type="submit" name="consultar-propietario" id="regreso-menu"
+                                onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'">
+                                <p style="color: #212529">Regresar al menú principal</p>
+                            </button>
+                        </li>
+                    </ul>
+            </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Sección del pie de página -->
+
+    <section id="seccion5">
+        <!-- Footer -->
+        <footer class="page-footer bg-secondary text-white pt-4">
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <!-- Content -->
+                    <h5 class="font-weight-bold">VacuPet</h5>
+                    <p id="pie-de-pagina">
+                        Proyecto desarrollado por el grupo #6 del G64 en el marco
+                        del ciclo 3 del programa misiónTic 2022
+                    </p>
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Text -->
+            <!-- Copyright -->
+            <div id="copyright" class="footer-copyright text-center py-1 text-black">
+                (c) 2022 Copyright: DAD
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- jQuery and JS bundle w/ Popper.js -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-
+   DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+        </script>
+    </section>
+
+</body>
+
+</html>

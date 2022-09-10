@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Consulta Usuarios</title>
+    <title>Registro Usuarios</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
@@ -40,7 +40,7 @@
 
         <div class="module">
             <div class="module-inside">
-                <h2 class="menu-titulo" id="menu-titulo">Consulta Usuarios</h2>
+                <h2 class="menu-titulo" id="menu-titulo">Registro Usuarios</h2>
 
                 <section class="consulta">
                     <div class="gestion-pacientes">
@@ -55,132 +55,128 @@
                                     <section id="datos">
                                         <div>
                                             <p>
-                                                <label for="nombre" class="colocar_nombre">Nombre
+                                                <label for="tipo" class="colocar_tipo">Tipo De Documento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="text" name="introducir_nombre" id="nombre"
-                                                    required="obligatorio" placeholder="Escribe tu nombre">
+                                                <select name="introducir_tipo" id="tipo" required="obligatorio"
+                                                    placeholder="Tipo De Documento">
+                                                    <option>C.C</option>
+                                                    <option>T.I</option>
+                                                    <option>Cedula de Extranjería</option>
+                                                    <option>Pasaporte</option>
+                                                </select>
                                             </p>
 
                                             <p>
-                                                <label for="email" class="colocar_email">Email
+                                                <label for="nombres" class="colocar_nombres">Nombres
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="email" name="introducir_email" id="email"
-                                                    required="obligatorio" placeholder="Escribe tu Email">
+                                                <input type="text" name="introducir_nombres" id="nombres"
+                                                    required="obligatorio" placeholder="Escribe tus Nombres">
                                             </p>
 
                                             <p>
-                                                <label for="telefone" class="colocar_telefono">Teléfono
+                                                <label for="correo" class="colocar_correo">Correo
+                                                    <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="tel" name="introducir_telefono" id="telefono"
-                                                    placeholder="Escribe tu teléfono">
+                                                <input type="email" name="introducir_correo" id="correo"
+                                                    placeholder="Escribe tu correo">
                                             </p>
 
                                             <p>
-                                                <label for="website" class="colocar_website">Sitio web
+                                                <label for="empresa" class="colocar_empresa">Empresa o entidad
                                                 </label>
-                                                <input type="url" name="introducir_website" id="website"
-                                                    placeholder="Escribe la URL de tu web">
+                                                <input type="url" name="introducir_empresa" id="empresa"
+                                                    placeholder="Escribe tu empresa o entidad">
                                             </p>
 
                                         </div>
                                         <div>
                                             <p>
-                                                <label for="nombre" class="colocar_nombre">Nombre
+                                                <label for="numero-documento" class="colocar_documento">Número de
+                                                    Documento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="text" name="introducir_nombre" id="nombre"
-                                                    required="obligatorio" placeholder="Escribe tu nombre">
+                                                <input type="number" name="introducir_documento" id="documento"
+                                                    required="obligatorio" placeholder="Escribe tu documento">
                                             </p>
 
                                             <p>
-                                                <label for="email" class="colocar_email">Email
+                                                <label for="apellidos" class="colocar_apellidos">Apellidos
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="email" name="introducir_email" id="email"
-                                                    required="obligatorio" placeholder="Escribe tu Email">
+                                                <input type="text" name="introducir_apellidos" id="apellidos"
+                                                    required="obligatorio" placeholder="Escribe tus apellidos">
                                             </p>
 
                                             <p>
-                                                <label for="telefone" class="colocar_telefono">Teléfono
+                                                <label for="telefone" class="colocar_telefono">Celular o teléfono
+                                                    <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="tel" name="introducir_telefono" id="telefono"
+                                                <input type="number" name="introducir_telefono" id="telefone"
                                                     placeholder="Escribe tu teléfono">
                                             </p>
 
                                             <p>
-                                                <label for="website" class="colocar_website">Sitio web
+                                                <label for="tipo" class="colocar_tipo">Tipo de usuario
                                                 </label>
-                                                <input type="url" name="introducir_website" id="website"
-                                                    placeholder="Escribe la URL de tu web">
+                                                <input type="text" name="introducir_tipo" id="tipo"
+                                                    placeholder="Escribe tu tipo de usuario">
                                             </p>
 
                                         </div>
                                     </section>
+                                    <section id="area-texto">
+                                        <p>
+                                            <label for="mensaje" class="colocar_mensaje">Observaciones
+                                                <span class="obligatorio">*</span>
+                                            </label>
+                                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
+                                                required="obligatorio"
+                                                placeholder="Deja aquí tus observaciones..."></textarea>
+                                        </p>
 
-                                    <p>
-                                        <label for="mensaje" class="colocar_mensaje">Mensaje
-                                            <span class="obligatorio">*</span>
-                                        </label>
-                                        <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                                            required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea>
-                                    </p>
-
-                                    <button type="submit" name="enviar_formulario" id="enviar">
-                                        <p>Enviar</p>
-                                    </button>
-
-                                    <p class="aviso">
-                                        <span class="obligatorio"> * </span>los campos son obligatorios.
-                                    </p>
+                                        <p class="aviso">
+                                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                                        </p>
 
 
+                                    </section>
+
+                                    <ul class="fila">
+
+
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="guardar-informacion" id="guardar">
+                                                <p>Guardar</p>
+                                            </button>
+                                        </li>
+
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="consultar-propietario" id="boton-consultar">
+                                                <p>Consultar</p>
+                                            </button>
+                                        </li>
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="eliminar" id="boton-eliminar">
+                                                <p>Eliminar</p>
+                                            </button>
+                                        </li>
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="consultar-propietario" id="regreso-menu"
+                                                onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'">
+                                                <p style="color: #212529">Regresar al menú principal</p>
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </form>
                             </div>
                         </div>
                     </div>
-
-                    <label id="cedula">Escribe el identificador del usuario</label>
-                    <ul class="fila">
-                        <li id="id-usuario" class="pseudo-boton">
-                            <input type="number" name="id-usuario" id="id-user" required="obligatorio"
-                                placeholder="ID usuario">
-                        </li>
-                        <li class="pseudo-boton">
-                            <button type="submit" name="consultar-propietario" id="consultar-propietario">
-                                <p>Consultar Usuario</p>
-                            </button>
-                        </li>
-                        <li class="pseudo-boton">
-                            <button type="submit" name="consultar-propietario" id="consultar-propietario">
-                                <p>Consultar Todos los Usuarios</p>
-                            </button>
-                        </li>
-                        <li class="pseudo-boton">
-                            <button type="submit" name="consultar-propietario" id="regreso-menu"
-                                onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'">
-                                <p style="color: #212529">Regresar al menú principal</p>
-                            </button>
-                        </li>
-                    </ul>
             </div>
     </section>
 
-    <section class="consulta">
-        <div id="consultas">
-            <h5>Lista de Usuarios registrados</h5>
-        </div>
-
-    </section>
-
-    </div>
-
-
-
-    </div>
-
-    </section>
+    
 
 
 
@@ -217,7 +213,7 @@
    DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-            </script>
+        </script>
     </section>
 
 </body>

@@ -80,7 +80,7 @@ ul {
 
 textarea {
     background-color: #fbfbfb;
-    width: 790px;
+    width: 1015px;
     height: 150px;
     border-radius: 5px;
     border-style: solid;
@@ -94,25 +94,13 @@ textarea {
 
 
 label {
+    margin-left: 15px;
     display: block;
     float: center;
 }
 
 
 button {
-    /* color: #000000;
-    display: flex;
-    justify-content: center;
-    margin: 20px;
-    margin-top: 5px;
-    background-color: #63a2de;
-    border-color: #000000;
-    border-style: solid;
-    border-radius: 20px;
-    width: 180px;
-    height: 30px;
-    cursor: pointer; */
-
     color: #000000;
     display: flex;
     justify-content: center;
@@ -127,6 +115,21 @@ button {
     height: 55px;
     cursor: pointer;
 }
+
+.botones-formulario{
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 5px;
+    background-color: #63a2de;
+    border-color: #000000;
+    border-style: solid;
+    border-radius: 20px;
+    width: 130px;
+    height: 30px;
+    cursor: pointer;}
 
 
 button:hover {
@@ -159,7 +162,6 @@ h1 {
 
 
 h3 {
-    text-align: center;
     margin-left: 30px;
     font-size: 30px;
     padding-top: 20px;
@@ -184,6 +186,7 @@ p {
 }
 
 .formulario {
+    margin-left: 30px;
     display: flex;
     justify-content: center;
 }
@@ -263,28 +266,28 @@ select:focus {
 
 input {
     background-color: #fbfbfb;
-    width: 350px;
+    width: 150px;
     height: 30px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: #0d6efd;
+    margin: 5px;
     margin-top: 5px;
     margin-bottom: 15px;
-    padding-left: 10px;
 }
 
 select {
     background-color: #fbfbfb;
-    width: 350px;
+    width: 150px;
     height: 30px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: #0d6efd;
+    margin: 5px;
     margin-top: 5px;
     margin-bottom: 15px;
-    padding-left: 10px;
 }
 
 #regreso-menu {
@@ -319,11 +322,10 @@ select {
     border: 1px solid #00000047;
 }
 
-#datos {
-    display: flex;
-    justify-content: space-around;
+#area-texto {
+    margin-left: 15px;
 }
 
-#area-texto {
-    margin-left: 45px;
+.info-enlinea{
+    display: inline-flex;
 }
