@@ -45,15 +45,22 @@
                 <section class="consulta">
                     <div class="gestion-pacientes">
                         <h3>Datos Usuario</h3>
-                        
+                        <div class="info">
+                        <form action="consulta-usuarios-formulario.php" method="post">    
                         <label id="cedula">Escribe el identificador del usuario</label>
                         <ul class="fila">
                             <li id="id-usuario" class="pseudo-boton">
-                                <input type="number" name="id-usuario" id="id-user" required="obligatorio" placeholder="ID usuario">
+                                <input type="number" name="id-usuario" id="id-user"placeholder="ID usuario"
+                                required
+                                oninvalid="this.setCustomValidity('Ingresa el ID del usuario')"
+                                oninput="this.setCustomValidity('')">
                             </li> 
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Usuario</p></button>
                             </li>
+                        </ul>
+                        </form>
+                        <ul class="fila">
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Todos los Usuarios</p></button>
                             </li>
@@ -62,6 +69,7 @@
                             </li>
                         </ul>
                     </div>
+                </div>
                 </section>
 
                 <section class="consulta">

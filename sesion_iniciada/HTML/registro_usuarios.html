@@ -51,7 +51,7 @@
 
                             <div class="formulario">
 
-                                <form action="submeter-formulario.php" method="post">
+                                <form action="registro-formulario.php" method="post">
                                     <section id="datos">
                                         <div>
                                             <p>
@@ -72,7 +72,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_nombres" id="nombres"
-                                                    required="obligatorio" placeholder="Escribe tus Nombres">
+                                                required
+                                                oninvalid="this.setCustomValidity('Nombres del paciente')"
+                                                oninput="this.setCustomValidity('')"
+                                                placeholder="Escribe tus Nombres">
                                             </p>
 
                                             <p>
@@ -80,6 +83,9 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="email" name="introducir_correo" id="correo"
+                                                required
+                                                oninvalid="this.setCustomValidity('E-mail del paciente')"
+                                                oninput="this.setCustomValidity('')"
                                                     placeholder="Escribe tu correo">
                                             </p>
 
@@ -98,7 +104,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="number" name="introducir_documento" id="documento"
-                                                    required="obligatorio" placeholder="Escribe tu documento">
+                                                required
+                                                oninvalid="this.setCustomValidity('Documento del Paciente')"
+                                                oninput="this.setCustomValidity('')"
+                                                placeholder="Escribe tu documento">
                                             </p>
 
                                             <p>
@@ -106,7 +115,9 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_apellidos" id="apellidos"
-                                                    required="obligatorio" placeholder="Escribe tus apellidos">
+                                                required
+                                                oninvalid="this.setCustomValidity('Apellidos del paciente')"
+                                                oninput="this.setCustomValidity('')" placeholder="Escribe tus apellidos">
                                             </p>
 
                                             <p>
@@ -114,6 +125,9 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="number" name="introducir_telefono" id="telefone"
+                                                required
+                                                oninvalid="this.setCustomValidity('Telefono del paciente')"
+                                                oninput="this.setCustomValidity('')"
                                                     placeholder="Escribe tu teléfono">
                                             </p>
 
@@ -129,10 +143,8 @@
                                     <section id="area-texto">
                                         <p>
                                             <label for="mensaje" class="colocar_mensaje">Observaciones
-                                                <span class="obligatorio">*</span>
                                             </label>
                                             <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                                                required="obligatorio"
                                                 placeholder="Deja aquí tus observaciones..."></textarea>
                                         </p>
 

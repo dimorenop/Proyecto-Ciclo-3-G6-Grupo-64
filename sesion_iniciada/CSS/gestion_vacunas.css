@@ -266,7 +266,7 @@ select:focus {
 
 input {
     background-color: #fbfbfb;
-    width: 150px;
+    width: 205px;
     height: 30px;
     border-radius: 5px;
     border-style: solid;
@@ -328,4 +328,8 @@ select {
 
 .info-enlinea{
     display: inline-flex;
+}
+
+.botones-formulario{
+    height: 50px;;
 }

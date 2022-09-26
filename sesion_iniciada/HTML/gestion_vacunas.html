@@ -40,7 +40,7 @@
 
         <div class="module">
             <div class="module-inside">
-                <h2 class="menu-titulo" id="menu-titulo">Gestion Pacientes</h2>
+                <h2 class="menu-titulo" id="menu-titulo">Gestion Vacunas</h2>
 
                 <section class="consulta">
                     <div class="gestion-pacientes">
@@ -51,15 +51,15 @@
 
                             <div class="formulario">
 
-                                <form action="submeter-formulario.php" method="post">
-                                    <section id="datos">
+                                <form action="gestion-vacunas-formulario.php" method="post">
+                                   <section id="datos">
                                         <div class="info-enlinea">
                                             <p>
                                                 <label for="tipo" class="colocar_tipo">Tipo De Documento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="introducir_tipo" id="tipo" required="obligatorio"
-                                                    placeholder="Tipo De Documento">
+                                                <select name="introducir_tipo" id="tipo"
+                                                    placeholder="Tipo De Documento" required>
                                                     <option>C.C</option>
                                                     <option>T.I</option>
                                                     <option>Cedula de Extranjería</option>
@@ -73,17 +73,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="number" name="introducir_documento" id="documento"
-                                                    required="obligatorio" placeholder="Escribe tu documento">
-                                            </p>
-
-                                            <p>
-
-                                                <label for="vacuna" class="colocar_vacuna">Consulta
-                                                </label>
-                                                <button type="submit" class="botones-formulario"
-                                                    id="consultar-propietario">
-                                                    Consultar Propietario
-                                                </button>
+                                                    
+                                            required
+                                            oninvalid="this.setCustomValidity('Ingresa el documento del paciente')"
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe tu documento">
                                             </p>
 
                                             <p>
@@ -91,7 +84,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_nombres" id="nombres"
-                                                    required="obligatorio" placeholder="Escribe tu Nombres">
+                                                    
+                                            required
+                                            oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe los Nombres del propietario">
                                             </p>
 
                                             <p>
@@ -99,7 +95,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_apellidos" id="apellidos"
-                                                    required="obligatorio" placeholder="Escribe tus apellidos">
+                                                    
+                                            required
+                                            oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe los apellidos del propietario">
                                             </p>
 
                                             <p>
@@ -108,7 +107,7 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="date" name="introducir_fecha_nacimiento"
-                                                    id="fecha-nacimiento" required="obligatorio"
+                                                    id="fecha-nacimiento" required
                                                     placeholder="Fecha De Nacimiento">
                                             </p>
 
@@ -120,7 +119,7 @@
                                                 <label for="vacuna" class="colocar_vacuna">Vacuna
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="introducir_vacuna" id="vacuna" required="obligatorio"
+                                                <select name="introducir_vacuna" id="vacuna" required
                                                     placeholder="Vacuna">
                                                     <option>vacuna 1</option>
                                                     <option>vacuna 2</option>
@@ -134,7 +133,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_dosis" id="dosis"
-                                                    required="obligatorio" placeholder="Escribe la dosis aplicada">
+                                                    
+                                            required
+                                            oninvalid="this.setCustomValidity('Ingresa la dosis aplicada')"
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe la dosis aplicada">
                                             </p>
 
                                             <p>
@@ -143,14 +145,14 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="date" name="introducir_fecha_refuerzo" id="fecha-refuerzo"
-                                                    required="obligatorio" placeholder="Fecha De Refuerzo">
+                                                    required placeholder="Fecha De Refuerzo">
                                             </p>
 
                                             <p>
-                                                <label for="vacuna" class="colocar_vacuna">Vacuna
+                                                <label for="vacuna" class="colocar_vacuna">Aplicó:
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="introducir_vacuna" id="vacuna" required="obligatorio"
+                                                <select name="introducir_vacuna" id="vacuna" required
                                                     placeholder="Vacuna">
                                                     <option>Funcionario 1</option>
                                                     <option>Funcionario 2</option>
@@ -183,6 +185,7 @@
 
                             <div id="consultas">
                                 <h5>Tabla consulta de vacunas</h5>
+                                <p>Acá va un resumen de las últimas 30 vacunas aplicadas en la última semana</p>
                             </div>
 
                         </div>

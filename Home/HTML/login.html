@@ -28,10 +28,10 @@
                         <a class="nav-link" href="../HTML/contactanos.html">Contáctanos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../HTML/login.html" id = "usuario-login">Iniciar Sesión</a>
+                        <a class="nav-link" href="../HTML/login.html" id="usuario-login">Iniciar Sesión</a>
                     </li>
                     <li class="nav-item" margin-right: 50px;>
-                        <a class="nav-link" href="../HTML/signup.html" id = "usuario-signup">Regístrate</a>
+                        <a class="nav-link" href="../HTML/signup.html" id="usuario-signup">Regístrate</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +47,7 @@
 
                         <div class="formulario">
 
-                            <form action="submeter-formulario.php" method="post">
+                            <form action="login-formulario.php" method="post">
 
                                 <p>
                                     <label for="email" class="colocar_email" style="
@@ -55,18 +55,20 @@
                                 ">Email
                                         <span class="obligatorio">*</span>
                                     </label>
-                                    <input type="email" name="introducir_email" id="email" required="obligatorio"
+                                    <input type="email" name="introducir_email" id="email"  required oninvalid="this.setCustomValidity('Ingresa tu  E-mail')"
+  	oninput="this.setCustomValidity('')"
                                         placeholder="Escribe tu Email">
                                 </p>
 
                                 <p>
-                                    <label for="Contraseña" class="colocar_contraseña" style="
+                                    <label for="password" class="colocar_contraseña" style="
                                     font-size: 18px;
                                 ">Contraseña
                                         <span class="obligatorio">*</span>
                                     </label>
                                     <input type="password" name="introducir_contraseña" id="password"
-                                        placeholder="Tu contraseña">
+                                        placeholder="Tu contraseña" required oninvalid="this.setCustomValidity('Ingresa tu contraseña')"
+                                        oninput="this.setCustomValidity('')">
                                 </p>
 
                                 <p class="aviso">
@@ -82,7 +84,8 @@
 
                         <div class="AccountFooter">
                             <h3>¿Aún no tienes cuenta en VacuPet?</h3>
-                            <div class="AccountFooter-link" style="margin: 20px;"><a href="../HTML/signup.html" ><span id = "registrate">Crear cuenta</span></a>
+                            <div class="AccountFooter-link" style="margin: 20px;"><a href="../HTML/signup.html"><span
+                                        id="registrate">Crear cuenta</span></a>
                             </div>
                         </div>
 

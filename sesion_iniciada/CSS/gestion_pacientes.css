@@ -185,8 +185,6 @@ p {
 
 .formulario {
     margin-left: 30px;
-    display: flex;
-    justify-content: center;
 }
 
 .formulario input:focus {

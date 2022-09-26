@@ -297,3 +297,8 @@ input{
     background-color: #ffffff82;
     border-radius: 10px;
 }
+
+.info{
+  display: flex;
+  align-items: flex-end;
+}

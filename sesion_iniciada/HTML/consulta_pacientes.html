@@ -45,16 +45,22 @@
                 <section class="consulta">
                     <div class="gestion-pacientes">
                         <h3>Datos Paciente</h3>
-                        
+                        <div class="info">
+                        <form action="consulta-pacientes-formulario.php" method="post">
                         <label id="cedula">Cedula Responsable</label>
                         <ul class="fila">
-
                             <li id="cedula-responsable" class="pseudo-boton">
-                                <input type="number" name="introducir-cedula" id="input-cedula" required="obligatorio" placeholder="Cedula">
+                                <input type="number" name="introducir-cedula" id="input-cedula"                                                 
+                                required
+                                oninvalid="this.setCustomValidity('Ingresa la cedula del paciente')"
+                                oninput="this.setCustomValidity('')" placeholder="Cedula">
                             </li> 
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Mascotas del Propietario</p></button>
                             </li>
+                        </ul>
+                        </form>
+                        <ul class="fila">
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Todos los Pacientes</p></button>
                             </li>
@@ -63,6 +69,7 @@
                             </li>
                         </ul>
                     </div>
+                </div>
                 </section>
 
                 <section class="consulta">

@@ -42,23 +42,24 @@
             <div class="module-inside">
                 <h2 class="menu-titulo" id="menu-titulo">Gestion Pacientes</h2>
 
-                <section class="consulta">
-                    <div class="gestion-pacientes">
-                        <div class="contact_form">
-                            <h3>Datos propietario mascota</h3>
+                    <section class="consulta">
 
+                        <form action="gestion-pacientes-formulario.php" method="post">
+                        <div class="gestion-pacientes">
+                            <div class="contact_form">
+                                <h3>Datos propietario mascota</h3>
 
+                                <div class="formulario">
 
-                            <div class="formulario">
-
-                                <form action="submeter-formulario.php" method="post">
                                     <section id="datos">
                                         <div class="info-enlinea">
                                             <p>
                                                 <label for="tipo" class="colocar_tipo">Tipo De Documento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="introducir_tipo" id="tipo" required="obligatorio"
+                                                <select name="introducir_tipo" id="tipo" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tu Tipo de Documento')"
+                                                    oninput="this.setCustomValidity('')"
                                                     placeholder="Tipo De Documento">
                                                     <option>C.C</option>
                                                     <option>T.I</option>
@@ -72,28 +73,34 @@
                                                     Documento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="number" name="introducir_documento" id="documento"
-                                                    required="obligatorio" placeholder="Escribe tu documento">
+                                                <input type="number" name="introducir_documento" id="documento" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tu Documento')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe tu documento">
                                             </p>
 
                                             <p>
                                                 <label for="nombres" class="colocar_nombres">Nombres
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="text" name="introducir_nombres" id="nombres"
-                                                    required="obligatorio" placeholder="Escribe tu Nombres">
+                                                <input type="text" name="introducir_nombres" id="nombres" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tus Nombres')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe tu Nombres">
                                             </p>
 
                                             <p>
                                                 <label for="apellidos" class="colocar_apellidos">Apellidos
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="text" name="introducir_apellidos" id="apellidos"
-                                                    required="obligatorio" placeholder="Escribe tus apellidos">
+                                                <input type="text" name="introducir_apellidos" id="apellidos" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tus apellidos')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe tus apellidos">
                                             </p>
-                                           
 
-                                           
+
+
                                         </div>
                                         <div class="info-enlinea">
                                             <p>
@@ -101,44 +108,49 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="email" name="introducir_correo" id="correo"
-                                                    placeholder="Escribe tu correo">
+                                                    placeholder="Escribe tu correo" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tu E-mail')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe tus apellidos">
                                             </p>
 
-                                            
+
 
                                             <p>
                                                 <label for="telefone" class="colocar_telefono">Celular o teléfono
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="number" name="introducir_telefono" id="telefone"
-                                                    placeholder="Escribe tu teléfono">
+                                                    placeholder="Escribe tu teléfono" required
+                                                    oninvalid="this.setCustomValidity('Ingresa tu Telefono')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe tus apellidos">
                                             </p>
 
                                         </div>
                                     </section>
 
-                                </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="gestion-pacientes">
-                        <div class="contact_form">
-                            <h3>Datos Paciente</h3>
-
+                        <div class="gestion-pacientes">
+                            <div class="contact_form">
+                                <h3>Datos Paciente</h3>
 
 
-                            <div class="formulario">
 
-                                <form action="submeter-formulario.php" method="post">
+                                <div class="formulario">
+
                                     <section id="datos">
                                         <div class="info-enlinea">
                                             <p>
                                                 <label for="tipo" class="colocar_tipo">Tipo De Mascota
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="introducir_tipo" id="tipo" required="obligatorio"
-                                                    placeholder="Tipo De Mascota">
+                                                <select name="introducir_tipo" id="tipo" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Tipo De Mascota">
                                                     <option>Canino</option>
                                                     <option>Felino</option>
                                                 </select>
@@ -149,60 +161,71 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="text" name="introducir_nombre_mascota" id="nombre-mascota"
-                                                    required="obligatorio" placeholder="Escribe el Nombre">
+                                                    required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Escribe el Nombre">
                                             </p>
 
                                             <p>
-                                                <label for="fecha-nacimiento" class="colocar_fecha_nacimiento">Fecha de Nacimiento
+                                                <label for="fecha-nacimiento" class="colocar_fecha_nacimiento">Fecha de
+                                                    Nacimiento
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <input type="date" name="introducir_fecha_nacimiento" id="fecha-nacimiento"
-                                                    required="obligatorio" placeholder="Fecha De Nacimiento">
+                                                <input type="date" name="introducir_fecha_nacimiento"
+                                                    id="fecha-nacimiento" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')"
+                                                    placeholder="Fecha De Nacimiento">
                                             </p>
 
                                             <p>
                                                 <label for="chip" class="colocar_tipo">Tiene Chip?
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="tiene_chip" id="chip" required="obligatorio"
-                                                    placeholder="Chip?">
+                                                <select name="tiene_chip" id="chip" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Chip?">
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
                                             </p>
-                                           
-       
+
+
                                         </div>
                                         <div class="info-enlinea">
-                                            
+
                                             <p>
                                                 <label for="antecedentes" class="colocar_tipo">Antecedentes Médicos
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="tiene_antecedentes" id="antecedentes" required="obligatorio"
-                                                    placeholder="antecedentes?">
+                                                <select name="tiene_antecedentes" id="antecedentes" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')" placeholder="antecedentes?">
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
                                             </p>
-                                            
+
                                             <p>
                                                 <label for="tratamiento" class="colocar_tipo">Tratamiento?
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="tiene_tratamiento" id="tratamiento" required="obligatorio"
-                                                    placeholder="tratamiento?">
+                                                <select name="tiene_tratamiento" id="tratamiento" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')" placeholder="tratamiento?">
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
                                             </p>
-                                            
+
                                             <p>
                                                 <label for="alergias" class="colocar_tipo">Alergias?
                                                     <span class="obligatorio">*</span>
                                                 </label>
-                                                <select name="tiene_alergias" id="alergias" required="obligatorio"
-                                                    placeholder="alergias?">
+                                                <select name="tiene_alergias" id="alergias" required
+                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninput="this.setCustomValidity('')" placeholder="alergias?">
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
@@ -216,8 +239,9 @@
                                                 <span class="obligatorio">*</span>
                                             </label>
                                             <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
-                                                required="obligatorio"
-                                                placeholder="Deja aquí tus observaciones..."></textarea>
+                                                placeholder="Deja aquí tus observaciones..."  required
+                                                oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
+                                                oninput="this.setCustomValidity('')"></textarea>
                                         </p>
 
                                         <p class="aviso">
@@ -227,43 +251,43 @@
 
                                     </section>
 
+                                    <ul class="fila">
 
-                                </form>
+
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="guardar-informacion" id="guardar">
+                                                <p>Guardar</p>
+                                            </button>
+                                        </li>
+
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="consultar-propietario" id="boton-consultar">
+                                                <p>Consultar</p>
+                                            </button>
+                                        </li>
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="eliminar" id="boton-eliminar">
+                                                <p>Eliminar</p>
+                                            </button>
+                                        </li>
+                                        <li class="pseudo-boton">
+                                            <button type="submit" name="consultar-propietario" id="regreso-menu"
+                                                onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'">
+                                                <p style="color: #212529">Regresar al menú principal</p>
+                                            </button>
+                                        </li>
+                                    </ul>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        </form>
 
 
-                    <ul class="fila">
 
-
-                        <li class="pseudo-boton">
-                            <button type="submit" name="guardar-informacion" id="guardar">
-                                <p>Guardar</p>
-                            </button>
-                        </li>
-
-                        <li class="pseudo-boton">
-                            <button type="submit" name="consultar-propietario" id="boton-consultar">
-                                <p>Consultar</p>
-                            </button>
-                        </li>
-                        <li class="pseudo-boton">
-                            <button type="submit" name="eliminar" id="boton-eliminar">
-                                <p>Eliminar</p>
-                            </button>
-                        </li>
-                        <li class="pseudo-boton">
-                            <button type="submit" name="consultar-propietario" id="regreso-menu"
-                                onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'">
-                                <p style="color: #212529">Regresar al menú principal</p>
-                            </button>
-                        </li>
-                    </ul>
             </div>
     </section>
 
-    
 
 
 

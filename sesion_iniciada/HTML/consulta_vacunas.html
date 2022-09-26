@@ -46,15 +46,22 @@
                 <section class="consulta">
                     <div class="gestion-pacientes">
                         <h3>Datos Vacuna</h3>
-                        
+                        <div class="info">
+                        <form action="consulta-vacunas-formulario.php" method="post">                     
                         <label id="cedula">Escribe el identificador de la Vacuna</label>
                         <ul class="fila">
-                            <li id="id-usuario" class="pseudo-boton">
-                                <input type="number" name="id-usuario" id="nombre-vacuna" required="obligatorio" placeholder="ID vacuna">
+                            <li id="id-vacuna" class="pseudo-boton">
+                                <input type="number" name="id-vacuna" id="nombre-vacuna" 
+                                required
+                                oninvalid="this.setCustomValidity('Ingresa el ID de la vacuna')"
+                                oninput="this.setCustomValidity('')" placeholder="ID vacuna">
                             </li> 
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Vacuna</p></button>
                             </li>
+                        </ul>
+                        </form>
+                        <ul class="fila">
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Todas las Vacunas</p></button>
                             </li>
@@ -62,6 +69,7 @@
                                 <button type="submit" name="consultar-propietario" id="regreso-menu" onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'"><p style="color: #212529">Regresar al menú principal</p></button>
                             </li>
                         </ul>
+                    </div>
                     </div>
                 </section>
 

@@ -48,7 +48,7 @@
 
                         <div class="formulario">
 
-                            <form action="submeter-formulario.php" method="post">
+                            <form action="signup-formulario.php" method="post">
 
                                 <p>
                                     <label for="email" class="colocar_email" style="
@@ -56,28 +56,28 @@
                                 ">Email
                                         <span class="obligatorio">*</span>
                                     </label>
-                                    <input type="email" name="introducir_email" id="email" required="obligatorio"
+                                    <input type="email" name="introducir_email" id="email"  required 		oninvalid="this.setCustomValidity('Ingresa tu E-mail')"
+  	oninput="this.setCustomValidity('')"
                                         placeholder="Escribe tu Email">
                                 </p>
 
                                 <p>
-                                    <label for="Contraseña" class="colocar_contraseña" style="
+                                    <label for="password" class="colocar_contraseña" style="
                                     font-size: 18px;
                                 ">Contraseña
                                         <span class="obligatorio">*</span>
                                     </label>
-                                    <input type="password" name="introducir_contraseña" id="password"
-                                        placeholder="Tu contraseña">
+                                    <input id="password" name="password" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'La contraseña debe tener al menos 6 carácteres' : ''); if(this.checkValidity()) form.confirm_password.pattern = this.value;" placeholder="Tu contraseña">    
                                 </p>
 
                                 <p>
-                                    <label for="Contraseña" class="colocar_contraseña" style="
+                                    <label for="confirm_password" class="colocar_contraseña" style="
                                     font-size: 18px;
                                 ">Confirma Contraseña
                                         <span class="obligatorio">*</span>
                                     </label>
-                                    <input type="password" name="confirmar_contraseña" id="password"
-                                        placeholder="Tu contraseña">
+                                    <input id="confirm_password" name="confirm_password" type="password" placeholder="Verifica tu constraseña" required
+                                    oninvalid="this.setCustomValidity('Por favor escribe nuevamente tu contraseña')" oninput="this.setCustomValidity('')">
                                 </p>
 
                                 <p class="aviso">
