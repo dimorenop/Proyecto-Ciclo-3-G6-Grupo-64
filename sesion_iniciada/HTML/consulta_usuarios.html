@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -56,13 +55,13 @@
                                 oninput="this.setCustomValidity('')">
                             </li> 
                             <li class="pseudo-boton">
-                                <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Usuario</p></button>
+                                <button th:href="@(/CONSULTA)" type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Usuario</p></button>
                             </li>
                         </ul>
                         </form>
                         <ul class="fila">
                             <li class="pseudo-boton">
-                                <button type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Todos los Usuarios</p></button>
+                                <button th:href="@(/CONSULTA)" type="submit" name="consultar-propietario" id="consultar-propietario"><p>Consultar Todos los Usuarios</p></button>
                             </li>
                             <li class="pseudo-boton">
                                 <button type="submit" name="consultar-propietario" id="regreso-menu" onclick="window.location.href='../../sesion_iniciada/HTML/menu_principal.html'"><p style="color: #212529">Regresar al menú principal</p></button>
@@ -74,7 +73,44 @@
 
                 <section class="consulta">
                 <div id="consultas">
-                    <h5>Lista de Usuarios registrados</h5>
+
+                    <table class="table table-striped table-bordered">
+                        <thead class="table-dark">
+                          <tr>
+                            <th>Nombre Usuario</th>
+                            <th># Mascotas</th>
+                            <th>Email</th>
+                            <th>Documento</th>
+                            <th>Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr th:each="student: ${students}">
+                            <td th:text="${student.firstName}"></td>
+                            <td th:text="${student.lastName}"></td>
+                            <td th:text="${student.email}"></td>
+                            <td>
+                              <th:block th:each="course,iter: ${student.courses}">
+                                <label th:text="${course.name}"></label>
+                                <th:block th:if="${!iter.last}"> </th:block>
+                              </th:block>
+                            </td>
+                            <td>
+                              <a
+                                th:href="@{/students/edit/{id}(id=${student.id})}"
+                                class="btn btn-primary"
+                                >Actualizar</a
+                              >
+                              <a
+                                th:href="@{/students/{id}(id=${student.id})}"
+                                class="btn btn-danger"
+                                >Borrar</a
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    
                 </div>
 
             </section>

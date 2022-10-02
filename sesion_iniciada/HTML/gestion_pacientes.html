@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,7 +43,8 @@
 
                     <section class="consulta">
 
-                        <form action="gestion-pacientes-formulario.php" method="post">
+                       
+                        <form th:action="@{/CONSULTA_ENDPOINT}" th:object="${CONSULTA_CLAVE}" method="POST"></form>
                         <div class="gestion-pacientes">
                             <div class="contact_form">
                                 <h3>Datos propietario mascota</h3>
@@ -59,7 +60,9 @@
                                                 <select name="introducir_tipo" id="tipo" required
                                                     oninvalid="this.setCustomValidity('Ingresa tu Tipo de Documento')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Tipo De Documento">
+                                                    placeholder="Tipo De Documento"
+                                                    th.field="${owner.idType}">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>C.C</option>
                                                     <option>T.I</option>
                                                     <option>Cedula de Extranjería</option>
@@ -75,7 +78,8 @@
                                                 <input type="number" name="introducir_documento" id="documento" required
                                                     oninvalid="this.setCustomValidity('Ingresa tu Documento')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tu documento">
+                                                    placeholder="Escribe tu documento"
+                                                    th.field="owner.id">
                                             </p>
 
                                             <p>
@@ -85,7 +89,8 @@
                                                 <input type="text" name="introducir_nombres" id="nombres" required
                                                     oninvalid="this.setCustomValidity('Ingresa tus Nombres')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tu Nombres">
+                                                    placeholder="Escribe tu Nombres"
+                                                    th.field="owner.name">
                                             </p>
 
                                             <p>
@@ -95,7 +100,8 @@
                                                 <input type="text" name="introducir_apellidos" id="apellidos" required
                                                     oninvalid="this.setCustomValidity('Ingresa tus apellidos')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tus apellidos">
+                                                    placeholder="Escribe tus apellidos"
+                                                    th.field="owner.lastName">
                                             </p>
 
 
@@ -110,7 +116,7 @@
                                                     placeholder="Escribe tu correo" required
                                                     oninvalid="this.setCustomValidity('Ingresa tu E-mail')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tus apellidos">
+                                                    th.field="owner.email">
                                             </p>
 
 
@@ -123,7 +129,7 @@
                                                     placeholder="Escribe tu teléfono" required
                                                     oninvalid="this.setCustomValidity('Ingresa tu Telefono')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tus apellidos">
+                                                    th.field="owner.phone">
                                             </p>
 
                                         </div>
@@ -148,8 +154,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <select name="introducir_tipo" id="tipo" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
-                                                    oninput="this.setCustomValidity('')" placeholder="Tipo De Mascota">
+                                                    oninvalid="this.setCustomValidity('Ingresa el tipo de mascota')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Tipo De Mascota"
+                                                    th.field="${pet.breed}">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>Canino</option>
                                                     <option>Felino</option>
                                                 </select>
@@ -161,9 +169,10 @@
                                                 </label>
                                                 <input type="text" name="introducir_nombre_mascota" id="nombre-mascota"
                                                     required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninvalid="this.setCustomValidity('Ingresa el nombre de la mascota')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe el Nombre">
+                                                    placeholder="Escribe el Nombre"
+                                                    th.field="pet.name">
                                             </p>
 
                                             <p>
@@ -173,9 +182,10 @@
                                                 </label>
                                                 <input type="date" name="introducir_fecha_nacimiento"
                                                     id="fecha-nacimiento" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
+                                                    oninvalid="this.setCustomValidity('Ingresa la fecha de nacimiento')"
                                                     oninput="this.setCustomValidity('')"
-                                                    placeholder="Fecha De Nacimiento">
+                                                    placeholder="Fecha De Nacimiento"
+                                                    th:field="pet.birthDate">
                                             </p>
 
                                             <p>
@@ -183,8 +193,10 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <select name="tiene_chip" id="chip" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
-                                                    oninput="this.setCustomValidity('')" placeholder="Chip?">
+                                                    oninvalid="this.setCustomValidity('Tiene chip?')"
+                                                    oninput="this.setCustomValidity('')" placeholder="Chip?"
+                                                    th:field="${pet.hasChip}">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
@@ -199,32 +211,38 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <select name="tiene_antecedentes" id="antecedentes" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
-                                                    oninput="this.setCustomValidity('')" placeholder="antecedentes?">
+                                                    oninvalid="this.setCustomValidity('Tiene antecedentes médicos?')"
+                                                    oninput="this.setCustomValidity('')" placeholder="antecedentes?"
+                                                    th:field="${pet.hasMedicalRecord}">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->                                                    
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
                                             </p>
 
-                                            <p>
+                                            <!-- <p>
                                                 <label for="tratamiento" class="colocar_tipo">Tratamiento?
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <select name="tiene_tratamiento" id="tratamiento" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
-                                                    oninput="this.setCustomValidity('')" placeholder="tratamiento?">
+                                                    oninvalid="this.setCustomValidity('tiene tratamiento?')"
+                                                    oninput="this.setCustomValidity('')" placeholder="tratamiento?"
+                                                    th:field="pet.hasMedicalRecord"
+                                                    >                                                    
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
-                                            </p>
+                                            </p> -->
 
                                             <p>
                                                 <label for="alergias" class="colocar_tipo">Alergias?
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <select name="tiene_alergias" id="alergias" required
-                                                    oninvalid="this.setCustomValidity('Enter User Name Here prro')"
-                                                    oninput="this.setCustomValidity('')" placeholder="alergias?">
+                                                    oninvalid="this.setCustomValidity('Tiene alergias?')"
+                                                    oninput="this.setCustomValidity('')" placeholder="alergias?"
+                                                    th:field="${pet.hasAllergies}">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->                
                                                     <option>Si</option>
                                                     <option>No</option>
                                                 </select>
@@ -240,7 +258,8 @@
                                             <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"
                                                 placeholder="Deja aquí tus observaciones..."  required
                                                 oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
-                                                oninput="this.setCustomValidity('')"></textarea>
+                                                oninput="this.setCustomValidity('')"
+                                                th:field="pet.observations"></textarea>
                                         </p>
 
                                         <p class="aviso">
@@ -259,12 +278,12 @@
                                             </button>
                                         </li>
 
-                                        <li class="pseudo-boton">
+                                        <li class="pseudo-boton ocultar">
                                             <button type="submit" name="consultar-propietario" id="boton-consultar">
                                                 <p>Consultar</p>
                                             </button>
                                         </li>
-                                        <li class="pseudo-boton">
+                                        <li class="pseudo-boton ocultar">
                                             <button type="submit" name="eliminar" id="boton-eliminar">
                                                 <p>Eliminar</p>
                                             </button>

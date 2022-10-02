@@ -333,3 +333,11 @@ select {
 .botones-formulario{
     height: 50px;;
 }
+
+#consultas{
+    margin: 0px auto;
+}
+
+.ocultar{
+    display: none;
+}

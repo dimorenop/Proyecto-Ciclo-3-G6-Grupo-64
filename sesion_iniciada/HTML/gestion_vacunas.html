@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8" />
@@ -51,7 +51,7 @@
 
                             <div class="formulario">
 
-                                <form action="gestion-vacunas-formulario.php" method="post">
+                                <form th:action="@{/CONSULTA_ENDPOINT}" th:object="${CONSULTA_CLAVE}" method="POST"></form>
                                    <section id="datos">
                                         <div class="info-enlinea">
                                             <p>
@@ -60,6 +60,7 @@
                                                 </label>
                                                 <select name="introducir_tipo" id="tipo"
                                                     placeholder="Tipo De Documento" required>
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->                                                    
                                                     <option>C.C</option>
                                                     <option>T.I</option>
                                                     <option>Cedula de Extranjería</option>
@@ -76,7 +77,8 @@
                                                     
                                             required
                                             oninvalid="this.setCustomValidity('Ingresa el documento del paciente')"
-                                            oninput="this.setCustomValidity('')" placeholder="Escribe tu documento">
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe tu documento"
+                                            th.field="id">
                                             </p>
 
                                             <p>
@@ -87,7 +89,8 @@
                                                     
                                             required
                                             oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
-                                            oninput="this.setCustomValidity('')" placeholder="Escribe los Nombres del propietario">
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe los Nombres del propietario"
+                                            th.field="nombres">
                                             </p>
 
                                             <p>
@@ -98,7 +101,8 @@
                                                     
                                             required
                                             oninvalid="this.setCustomValidity('Ingresa las observaciones del paciente')"
-                                            oninput="this.setCustomValidity('')" placeholder="Escribe los apellidos del propietario">
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe los apellidos del propietario"
+                                            th.field="apellidos">
                                             </p>
 
                                             <p>
@@ -108,7 +112,8 @@
                                                 </label>
                                                 <input type="date" name="introducir_fecha_nacimiento"
                                                     id="fecha-nacimiento" required
-                                                    placeholder="Fecha De Nacimiento">
+                                                    placeholder="Fecha De Nacimiento"
+                                                    th.field="fecha-nacimiento">
                                             </p>
 
                                         </div>
@@ -121,6 +126,7 @@
                                                 </label>
                                                 <select name="introducir_vacuna" id="vacuna" required
                                                     placeholder="Vacuna">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>vacuna 1</option>
                                                     <option>vacuna 2</option>
                                                     <option>vacuna 3</option>
@@ -136,7 +142,8 @@
                                                     
                                             required
                                             oninvalid="this.setCustomValidity('Ingresa la dosis aplicada')"
-                                            oninput="this.setCustomValidity('')" placeholder="Escribe la dosis aplicada">
+                                            oninput="this.setCustomValidity('')" placeholder="Escribe la dosis aplicada"
+                                            th.field="dosis">
                                             </p>
 
                                             <p>
@@ -145,7 +152,8 @@
                                                     <span class="obligatorio">*</span>
                                                 </label>
                                                 <input type="date" name="introducir_fecha_refuerzo" id="fecha-refuerzo"
-                                                    required placeholder="Fecha De Refuerzo">
+                                                    required placeholder="Fecha De Refuerzo"
+                                                    th.field="fecha-refuerzo">
                                             </p>
 
                                             <p>
@@ -154,6 +162,7 @@
                                                 </label>
                                                 <select name="introducir_vacuna" id="vacuna" required
                                                     placeholder="Vacuna">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>Funcionario 1</option>
                                                     <option>Funcionario 2</option>
                                                     <option>Funcionario 3</option>
@@ -184,8 +193,44 @@
 
 
                             <div id="consultas">
-                                <h5>Tabla consulta de vacunas</h5>
-                                <p>Acá va un resumen de las últimas 30 vacunas aplicadas en la última semana</p>
+                            
+                                <table class="table table-striped table-bordered">
+                                    <thead class="table-dark">
+                                      <tr>
+                                        <th>Vacuna</th>
+                                        <th>Paciente</th>
+                                        <th>Dosis</th>
+                                        <th>Fecha</th>
+                                        <th>Acciones</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr th:each="student: ${students}">
+                                        <td th:text="${student.firstName}"></td>
+                                        <td th:text="${student.lastName}"></td>
+                                        <td th:text="${student.email}"></td>
+                                        <td>
+                                          <th:block th:each="course,iter: ${student.courses}">
+                                            <label th:text="${course.name}"></label>
+                                            <th:block th:if="${!iter.last}"> </th:block>
+                                          </th:block>
+                                        </td>
+                                        <td>
+                                          <a
+                                            th:href="@{/students/edit/{id}(id=${student.id})}"
+                                            class="btn btn-primary"
+                                            >Actualizar</a
+                                          >
+                                          <a
+                                            th:href="@{/students/{id}(id=${student.id})}"
+                                            class="btn btn-danger"
+                                            >Borrar</a
+                                          >
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                
                             </div>
 
                         </div>
@@ -194,12 +239,12 @@
 
                     <ul class="fila">
 
-                        <li class="pseudo-boton">
+                        <li class="pseudo-boton ocultar">
                             <button type="submit" name="modificar" id="boton-modificar">
                                 <p>Modificar</p>
                             </button>
                         </li>
-                        <li class="pseudo-boton">
+                        <li class="pseudo-boton ocultar">
                             <button type="submit" name="eliminar" id="boton-eliminar">
                                 <p>Eliminar</p>
                             </button>

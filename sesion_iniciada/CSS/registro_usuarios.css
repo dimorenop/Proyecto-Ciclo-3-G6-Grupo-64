@@ -80,7 +80,7 @@ ul {
 
 textarea {
     background-color: #fbfbfb;
-    width: 790px;
+    width: 680px;
     height: 150px;
     border-radius: 5px;
     border-style: solid;
@@ -243,11 +243,11 @@ select:focus {
 }
 
 .gestion-pacientes {
+    width: 830px;
     padding: 10px;
-    margin: 15px;
+    margin: 25px;
     background-color: #ffffff82;
     border-radius: 10px;
-    margin-left: 30px;
 }
 
 #cedula {
@@ -325,5 +325,9 @@ select {
 }
 
 #area-texto {
-    margin-left: 45px;
+    margin: 0px 50px;
+}
+
+.ocultar{
+    display: none;
 }

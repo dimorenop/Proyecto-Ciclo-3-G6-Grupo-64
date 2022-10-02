@@ -327,3 +327,7 @@ select {
 .info-enlinea{
     display: inline-flex;
 }
+
+.ocultar{
+    display: none;
+}

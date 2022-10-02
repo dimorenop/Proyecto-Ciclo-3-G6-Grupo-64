@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8" />
@@ -50,8 +50,7 @@
 
 
                             <div class="formulario">
-
-                                <form action="registro-formulario.php" method="post">
+                                <form th:action="@{/CONSULTA_ENDPOINT}" th:object="${CONSULTA_CLAVE}" method="POST">
                                     <section id="datos">
                                         <div>
                                             <p>
@@ -60,6 +59,7 @@
                                                 </label>
                                                 <select name="introducir_tipo" id="tipo" required="obligatorio"
                                                     placeholder="Tipo De Documento">
+                                                    <!-- <option th:each="documentos : ${listaDocumentos}" th:value="${owner.idType}" th:text="${owner.idType}"></option> -->
                                                     <option>C.C</option>
                                                     <option>T.I</option>
                                                     <option>Cedula de Extranjería</option>
@@ -75,7 +75,8 @@
                                                 required
                                                 oninvalid="this.setCustomValidity('Nombres del paciente')"
                                                 oninput="this.setCustomValidity('')"
-                                                placeholder="Escribe tus Nombres">
+                                                placeholder="Escribe tus Nombres"
+                                                th.field="nombre">
                                             </p>
 
                                             <p>
@@ -86,14 +87,16 @@
                                                 required
                                                 oninvalid="this.setCustomValidity('E-mail del paciente')"
                                                 oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tu correo">
+                                                    placeholder="Escribe tu correo"
+                                                    th.field="email">
                                             </p>
 
                                             <p>
                                                 <label for="empresa" class="colocar_empresa">Empresa o entidad
                                                 </label>
                                                 <input type="url" name="introducir_empresa" id="empresa"
-                                                    placeholder="Escribe tu empresa o entidad">
+                                                    placeholder="Escribe tu empresa o entidad"
+                                                    th.field="empresa">
                                             </p>
 
                                         </div>
@@ -107,7 +110,8 @@
                                                 required
                                                 oninvalid="this.setCustomValidity('Documento del Paciente')"
                                                 oninput="this.setCustomValidity('')"
-                                                placeholder="Escribe tu documento">
+                                                placeholder="Escribe tu documento"
+                                                th.field="documento">
                                             </p>
 
                                             <p>
@@ -117,7 +121,8 @@
                                                 <input type="text" name="introducir_apellidos" id="apellidos"
                                                 required
                                                 oninvalid="this.setCustomValidity('Apellidos del paciente')"
-                                                oninput="this.setCustomValidity('')" placeholder="Escribe tus apellidos">
+                                                oninput="this.setCustomValidity('')" placeholder="Escribe tus apellidos"
+                                                th.field="apellidos">
                                             </p>
 
                                             <p>
@@ -128,14 +133,16 @@
                                                 required
                                                 oninvalid="this.setCustomValidity('Telefono del paciente')"
                                                 oninput="this.setCustomValidity('')"
-                                                    placeholder="Escribe tu teléfono">
+                                                    placeholder="Escribe tu teléfono"
+                                                    th.field="phone">
                                             </p>
 
                                             <p>
                                                 <label for="tipo" class="colocar_tipo">Tipo de usuario
                                                 </label>
                                                 <input type="text" name="introducir_tipo" id="tipo"
-                                                    placeholder="Escribe tu tipo de usuario">
+                                                    placeholder="Escribe tu tipo de usuario"
+                                                    th.field="tipo">
                                             </p>
 
                                         </div>
@@ -164,12 +171,12 @@
                                             </button>
                                         </li>
 
-                                        <li class="pseudo-boton">
+                                        <li class="pseudo-boton ocultar">
                                             <button type="submit" name="consultar-propietario" id="boton-consultar">
                                                 <p>Consultar</p>
                                             </button>
                                         </li>
-                                        <li class="pseudo-boton">
+                                        <li class="pseudo-boton ocultar">
                                             <button type="submit" name="eliminar" id="boton-eliminar">
                                                 <p>Eliminar</p>
                                             </button>

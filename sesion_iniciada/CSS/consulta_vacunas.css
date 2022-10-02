@@ -303,3 +303,12 @@ input{
   display: flex;
   align-items: flex-end;
 }
+
+
+#consultas{
+  margin: 0px auto;
+}
+
+.ocultar{
+  display: none;
+}
